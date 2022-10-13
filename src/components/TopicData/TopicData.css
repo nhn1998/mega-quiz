@@ -1,0 +1,8 @@
+.background{
+    background-image: linear-gradient(rgb(78, 78, 99),rgb(104, 64, 109));
+}
+@media only screen and (max-width:576px){
+    .media{
+        display: grid;
+    }
+}

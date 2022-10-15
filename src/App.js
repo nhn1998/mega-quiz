@@ -46,7 +46,7 @@ function App() {
       ],
     },
     {
-      path:'/*',
+      path:'*',
       element:<RouteNotFound></RouteNotFound>
     }
     

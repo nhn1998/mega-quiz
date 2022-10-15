@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const QuizDetails = ({ quiz }) => {
     const { question } = quiz;
-    // console.log(quiz.correctAnswer)
+    // console.log(quiz)
     const toaster =()=>toast(quiz.correctAnswer)
     return (
         <div className='border container p-5 my-5 background-color text-light shadow-lg fw-bold w-auto'>
@@ -15,7 +15,7 @@ const QuizDetails = ({ quiz }) => {
             {question}
             <div className='mt-5'>
             {
-                quiz.options.map(option =><Options option={option} quiz={quiz}></Options>)
+                quiz.options.map(option =><Options  option={option} quiz={quiz}></Options>)
             }
             </div>
             <ToastContainer></ToastContainer>

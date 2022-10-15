@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './TopicData.css'
 const TopicData = ({ topic }) => {
     const { name, logo , id} = topic;
+    console.log(topic)
     return (
         <div className='mx-auto my-5 p-3 background media'>
             <div className=''>

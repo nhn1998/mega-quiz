@@ -4,7 +4,7 @@ import TopicData from '../TopicData/TopicData';
 import './Topics.css';
 import img from './img1.jpg'
 const Topics = () => {
-    const topics = useLoaderData()
+    const topics = useLoaderData();
 
     return (
         <div>

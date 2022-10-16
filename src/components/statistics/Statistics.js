@@ -1,18 +1,18 @@
 import React from 'react';
-import { LineChart,XAxis,YAxis,CartesianGrid, Line} from 'recharts';
-const Statistics = ({topic}) => {
-    return (
-        <div>
-            
-  {/* <LineChart width={500} height={300} data={topic}>
-    <XAxis dataKey="name"/>
-    <YAxis/>
-    <CartesianGrid stroke="#eee" strokeDasharray="5 5"/>
-    <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-    <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
-  </LineChart> */}
-        </div>
-    );
+import { useLoaderData } from 'react-router-dom';
+
+import StatisticsTotal from '../statsticsTotal/StatisticsTotal';
+
+const Statistics = () => {
+  const values = useLoaderData()
+  console.log(values)
+  return (
+    <div>
+      {
+        values.data.map(value =><StatisticsTotal key={value.id} value={value}></StatisticsTotal>)
+      }
+    </div>
+  );
 };
 
 export default Statistics;
